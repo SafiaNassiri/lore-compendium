@@ -7,10 +7,11 @@ import styles from './Admin.module.css'
 const EMPTY_FORM = {
     id: '', type: 'article', title: '', slug: '',
     tags: '', summary: '', content: '', relations: '',
+    era: '', year: '',
     updatedAt: new Date().toISOString().split('T')[0],
 }
 
-    const TYPES = ['article', 'character', 'deity', 'location', 'faction']
+    const TYPES = ['article', 'character', 'deity', 'location', 'faction', 'event']
 
     export default function Admin() {
     const { isAdmin, logout } = useAdmin()
@@ -59,15 +60,16 @@ const EMPTY_FORM = {
         }
 
         const parsed = {
-        ...form,
-        tags: form.tags.split(',').map(t => t.trim()).filter(Boolean),
-        relations: form.relations
-            .split(',')
-            .map(r => r.trim())
-            .filter(Boolean)
-            .map(r => {
-            const [id, ...rest] = r.split(':')
-            return { id: id.trim(), label: rest.join(':').trim() || 'related' }
+            ...form,
+            tags: form.tags.split(',').map(t => t.trim()).filter(Boolean),
+            year: form.year !== '' ? Number(form.year) : undefined,
+            relations: form.relations
+                .split(',')
+                .map(r => r.trim())
+                .filter(Boolean)
+                .map(r => {
+                const [id, ...rest] = r.split(':')
+                return { id: id.trim(), label: rest.join(':').trim() || 'related' }
             }),
         }
 
@@ -220,6 +222,22 @@ const EMPTY_FORM = {
                 <input className={styles.input} value={form.relations}
                     onChange={e => setForm(f => ({ ...f, relations: e.target.value }))}
                     placeholder="verglas:opposes, eiravel:employed"
+                />
+                </label>
+
+                <label className={styles.field}>
+                <span className={styles.label}>Era <em>(for events)</em></span>
+                <input className={styles.input} value={form.era}
+                    onChange={e => setForm(f => ({ ...f, era: e.target.value }))}
+                    placeholder="The Age of Binding"
+                />
+                </label>
+
+                <label className={styles.field}>
+                <span className={styles.label}>Year <em>(negative = before present)</em></span>
+                <input className={styles.input} type="number" value={form.year}
+                    onChange={e => setForm(f => ({ ...f, year: e.target.value }))}
+                    placeholder="-800"
                 />
                 </label>
             </div>

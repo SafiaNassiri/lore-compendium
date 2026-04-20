@@ -4,7 +4,7 @@ import EntryCard from '../components/EntryCard'
 import Tag from '../components/Tag'
 import styles from './Articles.module.css'
 
-const TYPES = ['all', 'article', 'deity', 'character', 'location', 'faction']
+const TYPES = ['all', 'article', 'deity', 'character', 'location', 'faction', 'event']
 
 export default function Articles() {
     const [search, setSearch]       = useState('')

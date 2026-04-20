@@ -9,6 +9,7 @@ const TYPE_COLORS = {
     location:  'var(--color-verdant)',
     faction:   'var(--color-crimson)',
     article:   'var(--color-text-secondary)',
+    event: 'var(--color-verdant)',
 }
 
 function renderContent(text) {

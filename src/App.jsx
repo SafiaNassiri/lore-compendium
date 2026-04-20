@@ -16,6 +16,7 @@ import AdminLogin from './pages/AdminLogin'
 import Search from './pages/Search'
 import TagPage from './pages/TagPage'
 import TagsIndex from './pages/TagsIndex'
+import Timeline from './pages/Timeline'
 
 export default function App() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/tags"     element={<TagsIndex />} />
           <Route path="/tag/:tag" element={<TagPage />} />  
+          <Route path="/timeline" element={<Timeline />} />
           <Route path="/search" element={<Search />} />
           <Route path="*"            element={<NotFound />} />
         </Routes>
