@@ -1,0 +1,118 @@
+.page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-lg);
+}
+
+.back {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    margin-bottom: var(--space-lg);
+    display: block;
+    transition: color 0.15s;
+}
+.back:hover { color: var(--color-frost); }
+
+.hero {
+    border-left: 3px solid;
+    padding-left: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.type {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-xs);
+}
+
+.title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    margin-bottom: var(--space-sm);
+}
+
+.summary {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-md);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: var(--space-xl);
+    align-items: start;
+}
+
+@media (max-width: 640px) {
+    .layout { grid-template-columns: 1fr; }
+}
+
+.content { }
+
+.para {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+}
+
+.sidebar {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+}
+
+.sidebarTitle {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+}
+
+.relation {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--space-sm);
+}
+
+.relationLabel {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    font-family: var(--font-body);
+}
+
+.relationLink {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    color: var(--color-frost);
+}
+
+.relationMissing {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.notFound {
+    padding: var(--space-xl);
+    text-align: center;
+}
