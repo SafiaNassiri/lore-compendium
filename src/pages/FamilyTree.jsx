@@ -4,7 +4,7 @@ import * as d3 from 'd3'
 import { getByType } from '../data/utils'
 import styles from './FamilyTree.module.css'
 
-// ── Tree data — define god relationships here ──────────────
+// Tree data — define god relationships here 
 const TREE_DATA = {
     id: 'origin',
     label: 'The Origin',
