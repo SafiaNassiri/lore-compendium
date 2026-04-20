@@ -26,6 +26,12 @@ const NAV = [
         { to: '/locations',  label: 'Locations' },
         ]
     },
+    {
+        label: 'System',
+        items: [
+        { to: '/admin', label: 'Admin Panel' },
+        ]
+    },
 ]
 
 export default function Sidebar({ open }) {

@@ -29,14 +29,14 @@ const entries = [
         updatedAt: '2025-01-01',
     },
 
-  // ── CHARACTERS ───────────────────────────────────────
+    // ── CHARACTERS ───────────────────────────────────────
     {
         id: 'eiravel',
         type: 'character',
         title: 'Eiravel',
         slug: 'eiravel',
         tags: ['mortal', 'protagonist', 'dissident-aligned'],
-        summary: 'A cartographer who mapped the Reach without permission — and found something that shouldn\'t exist.',
+        summary: "A cartographer who mapped the Reach without permission — and found something that shouldn't exist.",
         content: `Eiravel was contracted by the Orthodox Church to map the northern borders of the Verglas Reach — specifically to find gaps in Verglas's domain where Orthodox missionaries could establish footholds.\n\nShe completed the map. She also found the Threshold — a place where Verglas's power terminates abruptly, not from weakness, but by choice. What lies beyond it is the central mystery of the first book.`,
         relations: [
         { id: 'verglas', label: 'encountered' },
@@ -46,7 +46,7 @@ const entries = [
         updatedAt: '2025-01-01',
     },
 
-  // ── LOCATIONS ────────────────────────────────────────
+    // ── LOCATIONS ────────────────────────────────────────
     {
         id: 'verglas-reach',
         type: 'location',
@@ -67,7 +67,7 @@ const entries = [
         title: 'The Threshold',
         slug: 'the-threshold',
         tags: ['mystery', 'verglas-reach', 'key-location'],
-        summary: 'The exact point where Verglas\'s divine domain ends — by choice, not force.',
+        summary: "The exact point where Verglas's divine domain ends — by choice, not force.",
         content: `The Threshold has no physical marker. It cannot be seen, only felt — a sudden absence of the cold that defines the Reach, as if stepping out of a shadow into open air.\n\nEiravel was the first mortal to document it. Her notes describe it as "the place where the god decided to stop." What lies beyond it remains classified by the Orthodox Church.`,
         relations: [
         { id: 'verglas', label: 'border of domain' },
@@ -76,7 +76,7 @@ const entries = [
         updatedAt: '2025-01-01',
     },
 
-  // ── FACTIONS ─────────────────────────────────────────
+    // ── FACTIONS ─────────────────────────────────────────
     {
         id: 'orthodox-church',
         type: 'faction',
@@ -93,7 +93,7 @@ const entries = [
         updatedAt: '2025-01-01',
     },
 
-  // ── ARTICLES ─────────────────────────────────────────
+    // ── ARTICLES ─────────────────────────────────────────
     {
         id: 'the-ascension',
         type: 'article',
