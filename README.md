@@ -126,8 +126,6 @@ npm run deploy
 This runs `vite build` then pushes `/dist` to the `gh-pages` branch.  
 The live site will be at: `https://SafiaNassiri.github.io/verglas-compendium/`
 
-> **Note:** If your repo name differs from `verglas-compendium`, update the `base` field in `vite.config.js` to match.
-
 ### First-time setup
 
 1. Push the repo to GitHub
