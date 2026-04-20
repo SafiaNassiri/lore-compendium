@@ -22,3 +22,12 @@
     border-color: var(--color-frost);
     background: var(--color-raised);
 }
+
+.linkable {
+    cursor: pointer;
+}
+.linkable:hover {
+    color: var(--color-frost);
+    border-color: var(--color-frost-dim);
+    background: var(--color-raised);
+}

@@ -41,7 +41,7 @@ export default function EntryDetail() {
             <h1 className={styles.title}>{entry.title}</h1>
             <p className={styles.summary}>{entry.summary}</p>
             <div className={styles.tags}>
-            {entry.tags.map(t => <Tag key={t} label={t} />)}
+            {entry.tags.map(t => <Tag key={t} label={t} linkable />)}
             </div>
         </div>
 

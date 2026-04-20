@@ -22,7 +22,7 @@ export default function EntryCard({ entry }) {
             <p className={styles.summary}>{entry.summary}</p>
             <div className={styles.tags}>
             {entry.tags.slice(0, 3).map(t => (
-                <Tag key={t} label={t} />
+                <Tag key={t} label={t} linkable />
             ))}
             </div>
         </div>
