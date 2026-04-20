@@ -1,31 +1,30 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home.jsx'
+import Layout from './components/Layout'
+import Home from './pages/Home'
 
-// Placeholder pages — filled in subsequent feature commits
-const Placeholder = ({ title }) => (
-  <div style={{ padding: '4rem', textAlign: 'center', fontFamily: 'var(--font-heading)', color: 'var(--clr-silver)' }}>
-    <h2 style={{ color: 'var(--clr-divine)', marginBottom: '1rem' }}>{title}</h2>
-    <p>Coming in a future commit.</p>
+const Stub = ({ title }) => (
+  <div style={{ padding: 'var(--space-xl)', fontFamily: 'var(--font-display)', color: 'var(--color-text-muted)' }}>
+    <h2 style={{ color: 'var(--color-gold)' }}>{title}</h2>
+    <p style={{ fontFamily: 'var(--font-body)', marginTop: '8px' }}>Coming in a future feat branch.</p>
   </div>
 )
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter basename="/verglas-compendium">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/articles" element={<Placeholder title="Lore Articles" />} />
-        <Route path="/articles/:slug" element={<Placeholder title="Article" />} />
-        <Route path="/characters" element={<Placeholder title="Characters" />} />
-        <Route path="/characters/:slug" element={<Placeholder title="Character" />} />
-        <Route path="/locations" element={<Placeholder title="Locations" />} />
-        <Route path="/factions" element={<Placeholder title="Factions" />} />
-        <Route path="/family-tree" element={<Placeholder title="Living Gods — Family Tree" />} />
-        <Route path="/world-map" element={<Placeholder title="World Map" />} />
-        <Route path="*" element={<Placeholder title="404 — Lost in the Void" />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/"            element={<Home />} />
+          <Route path="/map"         element={<Stub title="World Map" />} />
+          <Route path="/regions"     element={<Stub title="Regions" />} />
+          <Route path="/gods"        element={<Stub title="Living Gods" />} />
+          <Route path="/family-tree" element={<Stub title="Lineage Tree" />} />
+          <Route path="/factions"    element={<Stub title="Factions" />} />
+          <Route path="/articles"    element={<Stub title="Articles" />} />
+          <Route path="/characters"  element={<Stub title="Characters" />} />
+          <Route path="/locations"   element={<Stub title="Locations" />} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
   )
 }
-
-export default App
