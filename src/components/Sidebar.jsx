@@ -24,6 +24,7 @@ const NAV = [
         { to: '/articles',   label: 'Articles' },
         { to: '/characters', label: 'Characters' },
         { to: '/locations',  label: 'Locations' },
+        { to: '/search', label: 'Search' },
         ]
     },
     {

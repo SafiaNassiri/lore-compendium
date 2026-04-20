@@ -13,6 +13,7 @@ import Locations from './pages/Locations'
 import Regions from './pages/Regions'
 import Admin from './pages/Admin'
 import AdminLogin from './pages/AdminLogin'
+import Search from './pages/Search'
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/locations"   element={<Locations />} />
           <Route path="/admin"       element={<Admin />} />
           <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/search" element={<Search />} />
           <Route path="*"            element={<NotFound />} />
         </Routes>
       </Layout>

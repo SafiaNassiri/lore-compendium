@@ -3,7 +3,7 @@ import { createContext, useContext, useState, useEffect } from 'react'
 const AdminContext = createContext(null)
 
 const ADMIN_KEY  = 'verglas_admin'
-const PASSWORD   = 'dissident'   // change this to whatever you want
+const PASSWORD   = 'dissident'
 
 export function AdminProvider({ children }) {
     const [isAdmin, setIsAdmin] = useState(() => {
