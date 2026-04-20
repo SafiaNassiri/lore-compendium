@@ -143,11 +143,11 @@ Each feature phase ships as a focused commit (or branch + PR if preferred).
 | Commit Tag           | Feature                                | Status        |
 |----------------------|----------------------------------------|---------------|
 | `feat: init`         | Scaffold, routing, design system       | ✅ Complete   |
-| `feat: layout`       | Sidebar nav, header, wiki shell        | ⬜ Next       |
-| `feat: cms`          | JSON data layer, lore entry schema     | ⬜ Planned    |
-| `feat: articles`     | Article pages, search, tag filtering   | ⬜ Planned    |
-| `feat: family-tree`  | D3.js Living Gods lineage tree         | ⬜ Planned    |
-| `feat: world-map`    | SVG world map with lore hotspots       | ⬜ Planned    |
+| `feat: layout`       | Sidebar nav, header, wiki shell        | ✅ Next       |
+| `feat: cms`          | JSON data layer, lore entry schema     | ✅ Planned    |
+| `feat: articles`     | Article pages, search, tag filtering   | ✅ Planned    |
+| `feat: family-tree`  | D3.js Living Gods lineage tree         | ✅ Planned    |
+| `feat: world-map`    | SVG world map with lore hotspots       | ✅ Planned    |
 | `feat: polish`       | Transitions, mobile, 404, final deploy | ⬜ Planned    |
 
 ---
