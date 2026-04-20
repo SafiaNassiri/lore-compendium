@@ -12,6 +12,8 @@ const entries = [
         { id: 'the-ascension', label: 'refused' },
         { id: 'verglas-reach', label: 'namesake of' },
         ],
+        book: 'Book 1: The Frozen Compact',
+        era: null, year: null,
         updatedAt: '2025-01-01',
     },
     {
@@ -26,9 +28,10 @@ const entries = [
         { id: 'verglas', label: 'opposes' },
         { id: 'the-ascension', label: 'architect of' },
         ],
+        book: 'Book 1: The Frozen Compact',
+        era: null, year: null,
         updatedAt: '2025-01-01',
     },
-
     // ── CHARACTERS ───────────────────────────────────────
     {
         id: 'eiravel',
@@ -43,9 +46,10 @@ const entries = [
         { id: 'verglas-reach', label: 'mapped' },
         { id: 'the-threshold', label: 'discovered' },
         ],
+        book: 'Book 1: The Frozen Compact',
+        era: null, year: null,
         updatedAt: '2025-01-01',
     },
-
     // ── LOCATIONS ────────────────────────────────────────
     {
         id: 'verglas-reach',
@@ -59,6 +63,8 @@ const entries = [
         { id: 'verglas', label: 'domain of' },
         { id: 'eiravel', label: 'mapped by' },
         ],
+        book: 'Book 1: The Frozen Compact',
+        era: null, year: null,
         updatedAt: '2025-01-01',
     },
     {
@@ -73,9 +79,10 @@ const entries = [
         { id: 'verglas', label: 'border of domain' },
         { id: 'eiravel', label: 'discovered by' },
         ],
+        book: 'Book 1: The Frozen Compact',
+        era: null, year: null,
         updatedAt: '2025-01-01',
     },
-
     // ── FACTIONS ─────────────────────────────────────────
     {
         id: 'orthodox-church',
@@ -90,9 +97,10 @@ const entries = [
         { id: 'verglas', label: 'opposes' },
         { id: 'eiravel', label: 'employed' },
         ],
+        book: 'Book 1: The Frozen Compact',
+        era: null, year: null,
         updatedAt: '2025-01-01',
     },
-
     // ── ARTICLES ─────────────────────────────────────────
     {
         id: 'the-ascension',
@@ -107,10 +115,11 @@ const entries = [
         { id: 'solenne', label: 'architected by' },
         { id: 'orthodox-church', label: 'enforced by' },
         ],
+        book: 'Book 1: The Frozen Compact',
+        era: null, year: null,
         updatedAt: '2025-01-01',
     },
-
-    // ── EVENTS / TIMELINE ────────────────────────────────
+    // ── EVENTS ───────────────────────────────────────────
     {
         id: 'the-first-refusal',
         type: 'event',
@@ -125,6 +134,7 @@ const entries = [
         ],
         era: 'The Age of Binding',
         year: -800,
+        book: null,
         updatedAt: '2025-01-01',
     },
     {
@@ -141,6 +151,7 @@ const entries = [
         ],
         era: 'The Age of Binding',
         year: -600,
+        book: null,
         updatedAt: '2025-01-01',
     },
     {
@@ -158,6 +169,7 @@ const entries = [
         ],
         era: 'The Age of Frost',
         year: -400,
+        book: null,
         updatedAt: '2025-01-01',
     },
     {
@@ -175,6 +187,7 @@ const entries = [
         ],
         era: 'The Present Age',
         year: 0,
+        book: null,
         updatedAt: '2025-01-01',
     },
 ]

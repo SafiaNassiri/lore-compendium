@@ -7,7 +7,7 @@ import styles from './Admin.module.css'
 const EMPTY_FORM = {
     id: '', type: 'article', title: '', slug: '',
     tags: '', summary: '', content: '', relations: '',
-    era: '', year: '',
+    era: '', year: '', book: '',
     updatedAt: new Date().toISOString().split('T')[0],
 }
 
@@ -238,6 +238,14 @@ const EMPTY_FORM = {
                 <input className={styles.input} type="number" value={form.year}
                     onChange={e => setForm(f => ({ ...f, year: e.target.value }))}
                     placeholder="-800"
+                />
+                </label>
+
+                <label className={`${styles.field} ${styles.fullWidth}`}>
+                <span className={styles.label}>Book <em>(e.g. Book 1: The Frozen Compact)</em></span>
+                <input className={styles.input} value={form.book}
+                    onChange={e => setForm(f => ({ ...f, book: e.target.value }))}
+                    placeholder="Book 1: The Frozen Compact"
                 />
                 </label>
             </div>

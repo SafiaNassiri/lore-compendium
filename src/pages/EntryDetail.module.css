@@ -116,3 +116,10 @@
     padding: var(--space-xl);
     text-align: center;
 }
+
+.book {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--color-gold-dim);
+    margin-top: var(--space-xs);
+}

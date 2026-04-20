@@ -17,6 +17,7 @@ import Search from './pages/Search'
 import TagPage from './pages/TagPage'
 import TagsIndex from './pages/TagsIndex'
 import Timeline from './pages/Timeline'
+import BookTracker from './pages/BookTracker'
 
 export default function App() {
   return (
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/tag/:tag" element={<TagPage />} />  
           <Route path="/timeline" element={<Timeline />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/books" element={<BookTracker />} />
           <Route path="*"            element={<NotFound />} />
         </Routes>
       </Layout>

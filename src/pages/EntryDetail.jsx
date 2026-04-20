@@ -1,6 +1,7 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { getBySlug, resolveRelations } from '../data/utils'
 import Tag from '../components/Tag'
+import NotesPanel from '../components/NotesPanel'
 import styles from './EntryDetail.module.css'
 
 const TYPE_COLORS = {
@@ -35,21 +36,24 @@ export default function EntryDetail() {
 
     return (
         <div className={styles.page}>
-        <button onClick={() => navigate(-1)} className={styles.back}>← Back</button>
+            <button onClick={() => navigate(-1)} className={styles.back}>← Back</button>
 
-        <div className={styles.hero} style={{ borderColor: color }}>
-            <p className={styles.type} style={{ color }}>{entry.type}</p>
-            <h1 className={styles.title}>{entry.title}</h1>
-            <p className={styles.summary}>{entry.summary}</p>
-            <div className={styles.tags}>
-            {entry.tags.map(t => <Tag key={t} label={t} linkable />)}
+            <div className={styles.hero} style={{ borderColor: color }}>
+                <p className={styles.type} style={{ color }}>{entry.type}</p>
+                <h1 className={styles.title}>{entry.title}</h1>
+                <p className={styles.summary}>{entry.summary}</p>
+                <div className={styles.tags}>
+                    {entry.tags.map(t => <Tag key={t} label={t} linkable />)}
+                </div>
+                {entry.book && (
+                    <p className={styles.book}>📖 {entry.book}</p>
+                )}
             </div>
-        </div>
 
-        <div className={styles.layout}>
-            <article className={styles.content}>
+            <div className={styles.layout}>
+        <article className={styles.content}>
             {renderContent(entry.content)}
-            </article>
+        </article>
 
             {relations.length > 0 && (
             <aside className={styles.sidebar}>
@@ -69,6 +73,11 @@ export default function EntryDetail() {
             </aside>
             )}
         </div>
+
+        <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 var(--space-lg)' }}>
+            <NotesPanel entryId={entry.id} />
+        </div>
+
         </div>
     )
 }
